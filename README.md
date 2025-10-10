@@ -23,7 +23,7 @@ This pack is configured by default to use the NGSIEM Destinations included in th
 * Add the additional Destination(s) into the Pack
 * Update the pack's routes to specify your desired Destination.
 
-Once the pack is installed from the Cribl Dispensary, only a few configurations will need to be modified to start data flowing. All sources are *disabled* by default to prevent unnecessary port conflicts. Variables referenced in this Pack can be updated under Knowledge > Variables.
+All sources are *disabled* by default to prevent unnecessary port conflicts. Variables referenced in this Pack can be updated under Knowledge > Variables.
 
 ### Configure the Next-Gen SIEM Destinations
 
