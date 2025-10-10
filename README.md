@@ -1,8 +1,9 @@
 # CrowdStrike Falcon Next-Gen SIEM Pack
 ----
 
-
 ## About this Pack
+
+This pack is built as a complete SOURCE + DESTINATION solution (identified by the IO suffix). Data collection and delivery happen entirely within the pack's context, eliminating the need to connect it to globally defined Sources and Destinations. 
 
 This Cribl Pack is designed to streamline the integration of common Cribl data sources with the CrowdStrike Falcon Next-Gen SIEM Platform. It provides pre-configured sources, destinations, pipelines, and routes to format and enrich data from various sources, ensuring compatibility with Next-Gen SIEM ingestion requirements/parsers. The pack simplifies the process of collecting, normalizing, and forwarding security events, enabling efficient analysis and threat detection within the CrowdStrike Next-Gen SIEM platform.
 
@@ -18,29 +19,30 @@ This pack is meant to include the full workflow (source->pipeline->destination) 
 
 ## Deployment
 
-Once the pack is installed from the Cribl Dispensary, only a few configurations will need to be modified to start data flowing. Below are the configuration items for each available source and destination. All sources are *disabled* by default to prevent unnecessary port conflicts. Variables referenced in this Pack can be updated under Knowledge > Variables.
+This pack is configured by default to use the NGSIEM Destinations included in the Pack. To use a different Destination, you must either:
+* Add the additional Destination(s) into the Pack
+* Update the pack's routes to specify your desired Destination.
 
-### Destinations
+Once the pack is installed from the Cribl Dispensary, only a few configurations will need to be modified to start data flowing. All sources are *disabled* by default to prevent unnecessary port conflicts. Variables referenced in this Pack can be updated under Knowledge > Variables.
 
+### Configure the Next-Gen SIEM Destinations
 
-#### CrowdStrike Falcon Next-Gen SIEM
-
-
-Before configuring the pre-built Next-Gen SIEM destinations, you must create them in the Next-Gen SIEM platform:
-- For each Pack-supported source, create a HEC/HTTP Event Data Connector in the Next-Gen SIEM Console.
-- Use the following Parsers for each data source (these Parsers have been tested as being compatible with the Pack):
-  - Palo Alto Firewall: *paloalto-ngfw*
-  - Cisco ASA Firewall: *cisco-asa*
-  - Fortinet Fortigate Firewall: *fortinet-fortigate*
-  - Windows Security logs: *microsoft-windows*
-- Generate an API Key for each Data Connector
-- Update the corresponding CrowdStrike Falcon Next-Gen SIEM Cribl destination with the correct *API URL* and *authentication token*
+Before configuring the pre-built Next-Gen SIEM Destinations, you must create them in the Next-Gen SIEM platform:
+* For each Pack-supported source, create a HEC/HTTP Event Data Connector in the Next-Gen SIEM Console.
+* Use the following Parsers for each data source (these Parsers have been tested as being compatible with the Pack):
+  * Palo Alto Firewall: *paloalto-ngfw*
+  * Cisco ASA Firewall: *cisco-asa*
+  * Fortinet Fortigate Firewall: *fortinet-fortigate*
+  * Cisco Identity Services Engine: *cisco-ise*
+  * Citrix Netscaler: *citrix-netscaler-adc*
+  * Windows Security logs: *microsoft-windows*
+* Generate an API Key for each Data Connector
+* Update the corresponding Pack Next-Gen SIEM Destination with the correct *API URL* and *authentication token*
 
 [Cribl CrowdStrike Falcon Next-Gen SIEM documentation](https://docs.cribl.io/stream/destinations-crowdstrike-next-gen-siem/#configuring-a-crowdstrike-falcon-next-gen-siem-destination)
 
 
-### Sources
-
+### Configure Sources
 
 #### Palo Alto Networks Firewall
 
@@ -119,9 +121,8 @@ Upgrading certain Cribl Packs using the same Pack ID can have unintended consequ
 
 ## Release Notes
 
-### Version 0.1.0
+### Version 1.0.0
 Initial release
-
 
 ## Contributing to the Pack
 

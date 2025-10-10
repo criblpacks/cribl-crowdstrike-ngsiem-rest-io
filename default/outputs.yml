@@ -22,7 +22,7 @@ outputs:
     onBackpressure: block
     type: crowdstrike_next_gen_siem
     url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
-    token: changeme
+    token: YOUR_TOKEN
     pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
   out_crowdstrike_ngsiem_cisco_asa:
     systemFields:
@@ -47,7 +47,7 @@ outputs:
     onBackpressure: block
     type: crowdstrike_next_gen_siem
     url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
-    token: changeme
+    token: YOUR_TOKEN
     pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
   out_crowdstrike_ngsiem_palo_alto:
     systemFields:
@@ -72,7 +72,7 @@ outputs:
     onBackpressure: block
     type: crowdstrike_next_gen_siem
     url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
-    token: changeme
+    token: YOUR_TOKEN
     pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
   out_crowdstrike_ngsiem_fortigate:
     systemFields:
@@ -97,7 +97,7 @@ outputs:
     onBackpressure: block
     type: crowdstrike_next_gen_siem
     url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
-    token: changeme
+    token: YOUR_TOKEN
     pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
   out_crowdstrike_ngsiem_cisco_ise:
     systemFields:
@@ -122,7 +122,7 @@ outputs:
     onBackpressure: block
     type: crowdstrike_next_gen_siem
     url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
-    token: changeme
+    token: YOUR_TOKEN
     pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
   out_crowdstrike_ngsiem_citrix_netscaler:
     systemFields:
@@ -147,5 +147,5 @@ outputs:
     onBackpressure: block
     type: crowdstrike_next_gen_siem
     url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
-    token: changeme
+    token: YOUR_TOKEN
     pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
