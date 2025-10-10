@@ -1,0 +1,59 @@
+output: default
+streamtags: []
+groups:
+  hivyCX:
+    name: Filter Event IDs
+    description: Convert _raw to JSON object, lookup event code against Id field,
+      drop all other event codes
+    index: 3
+    disabled: false
+asyncFuncTimeout: 1000
+functions:
+  - id: comment
+    filter: "true"
+    disabled: null
+    conf:
+      comment: Process and send only Security events to Crowdstrike NGSIEM
+  - id: comment
+    filter: "true"
+    disabled: null
+    conf:
+      comment: "Author: Cribl Packs Team"
+  - id: drop
+    filter: source!='Security'
+    disabled: null
+    conf: {}
+    description: Drop non Security events (Application, System, etc)
+    final: true
+  - id: regex_extract
+    filter: "true"
+    disabled: null
+    conf:
+      source: _raw
+      iterations: 100
+      overwrite: false
+      regex: /\<EventID\>(?<__EventID>\d+)\</
+    groupId: hivyCX
+  - id: lookup
+    filter: "true"
+    disabled: false
+    conf:
+      dbLookup: false
+      matchMode: exact
+      reloadPeriodSec: -1
+      inFields:
+        - eventField: __EventID
+          lookupField: event_id
+      addToEvent: false
+      ignoreCase: true
+      file: cribl_crowdstrike_ngsiem_retained_windows_eventIDs.csv
+      outFields:
+        - lookupField: keep
+          eventField: __keep
+    groupId: hivyCX
+  - id: drop
+    filter: __keep!='y'
+    disabled: false
+    conf: {}
+    groupId: hivyCX
+    description: Drop unwanted Event IDs

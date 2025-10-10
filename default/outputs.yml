@@ -1,0 +1,151 @@
+outputs:
+  out_crowdstrike_ngsiem_windows_events:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    concurrency: 5
+    maxPayloadSizeKB: 4096
+    maxPayloadEvents: 0
+    compress: true
+    rejectUnauthorized: true
+    timeoutSec: 30
+    flushPeriodSec: 1
+    useRoundRobinDns: true
+    failedRequestLoggingMode: none
+    safeHeaders: []
+    format: JSON
+    authType: manual
+    responseRetrySettings: []
+    timeoutRetrySettings:
+      timeoutRetry: false
+    responseHonorRetryAfterHeader: true
+    onBackpressure: block
+    type: crowdstrike_next_gen_siem
+    url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
+    token: changeme
+    pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
+  out_crowdstrike_ngsiem_cisco_asa:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    concurrency: 5
+    maxPayloadSizeKB: 4096
+    maxPayloadEvents: 0
+    compress: true
+    rejectUnauthorized: true
+    timeoutSec: 30
+    flushPeriodSec: 1
+    useRoundRobinDns: true
+    failedRequestLoggingMode: none
+    safeHeaders: []
+    format: JSON
+    authType: manual
+    responseRetrySettings: []
+    timeoutRetrySettings:
+      timeoutRetry: false
+    responseHonorRetryAfterHeader: true
+    onBackpressure: block
+    type: crowdstrike_next_gen_siem
+    url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
+    token: changeme
+    pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
+  out_crowdstrike_ngsiem_palo_alto:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    concurrency: 5
+    maxPayloadSizeKB: 4096
+    maxPayloadEvents: 0
+    compress: true
+    rejectUnauthorized: true
+    timeoutSec: 30
+    flushPeriodSec: 1
+    useRoundRobinDns: true
+    failedRequestLoggingMode: none
+    safeHeaders: []
+    format: JSON
+    authType: manual
+    responseRetrySettings: []
+    timeoutRetrySettings:
+      timeoutRetry: false
+    responseHonorRetryAfterHeader: true
+    onBackpressure: block
+    type: crowdstrike_next_gen_siem
+    url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
+    token: changeme
+    pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
+  out_crowdstrike_ngsiem_fortigate:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    concurrency: 5
+    maxPayloadSizeKB: 4096
+    maxPayloadEvents: 0
+    compress: true
+    rejectUnauthorized: true
+    timeoutSec: 30
+    flushPeriodSec: 1
+    useRoundRobinDns: true
+    failedRequestLoggingMode: none
+    safeHeaders: []
+    format: JSON
+    authType: manual
+    responseRetrySettings: []
+    timeoutRetrySettings:
+      timeoutRetry: false
+    responseHonorRetryAfterHeader: true
+    onBackpressure: block
+    type: crowdstrike_next_gen_siem
+    url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
+    token: changeme
+    pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
+  out_crowdstrike_ngsiem_cisco_ise:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    concurrency: 5
+    maxPayloadSizeKB: 4096
+    maxPayloadEvents: 0
+    compress: true
+    rejectUnauthorized: true
+    timeoutSec: 30
+    flushPeriodSec: 1
+    useRoundRobinDns: true
+    failedRequestLoggingMode: none
+    safeHeaders: []
+    format: JSON
+    authType: manual
+    responseRetrySettings: []
+    timeoutRetrySettings:
+      timeoutRetry: false
+    responseHonorRetryAfterHeader: true
+    onBackpressure: block
+    type: crowdstrike_next_gen_siem
+    url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
+    token: changeme
+    pipeline: cribl_crowdstrike_ngsiem_json_postprocessing
+  out_crowdstrike_ngsiem_citrix_netscaler:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    concurrency: 5
+    maxPayloadSizeKB: 4096
+    maxPayloadEvents: 0
+    compress: true
+    rejectUnauthorized: true
+    timeoutSec: 30
+    flushPeriodSec: 1
+    useRoundRobinDns: true
+    failedRequestLoggingMode: none
+    safeHeaders: []
+    format: JSON
+    authType: manual
+    responseRetrySettings: []
+    timeoutRetrySettings:
+      timeoutRetry: false
+    responseHonorRetryAfterHeader: true
+    onBackpressure: block
+    type: crowdstrike_next_gen_siem
+    url: https://ingest.us-2.crowdstrike.com/api/ingest/hec/YOUR_CONNECTION_URL/v1/services/collector
+    token: changeme
+    pipeline: cribl_crowdstrike_ngsiem_json_postprocessing

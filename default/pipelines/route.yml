@@ -1,0 +1,93 @@
+id: default
+groups: {}
+comments: []
+routes:
+  - id: pe0z5U
+    name: cribl_crowdstrike_ngsiem_pan_traffic_route
+    final: true
+    disabled: false
+    pipeline: cribl_crowdstrike_ngsiem_pan_traffic
+    description: Route Palo Alto Traffic Events to Reduction Pipeline
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __packsource=='cribl-crowdstrike-ngsiem-rest.palo_alto_networks' &&
+      /TRAFFIC/.test(_raw)
+    clones: []
+    output: out_crowdstrike_ngsiem_palo_alto
+  - id: V5BrGr
+    name: cribl_crowdstrike_ngsiem_pan_other_route
+    final: true
+    disabled: false
+    pipeline: cribl_crowdstrike_ngsiem_pan_other
+    description: Route remaining Palo Alto Events
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __packsource=='cribl-crowdstrike-ngsiem-rest.palo_alto_networks'
+    clones: []
+    output: out_crowdstrike_ngsiem_palo_alto
+  - id: jzOycj
+    name: cribl_crowdstrike_ngsiem_cisco_asa_route
+    final: true
+    disabled: false
+    pipeline: cribl_crowdstrike_ngsiem_cisco_asa
+    description: Route Cisco ASA Events to Reduction pipeline
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __packsource=='cribl-crowdstrike-ngsiem-rest.cisco_asa'
+    clones: []
+    output: out_crowdstrike_ngsiem_cisco_asa
+  - id: xp0NNc
+    name: cribl_crowdstrike_ngsiem_fortigate_route
+    final: true
+    disabled: false
+    pipeline: cribl_crowdstrike_ngsiem_fortigate
+    description: Route Fortigate Fortinet Events
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __packsource=='cribl-crowdstrike-ngsiem-rest.fortigate_firewall'
+    clones: []
+    output: out_crowdstrike_ngsiem_fortigate
+  - id: pDVx2f
+    name: cribl_crowdstrike_ngsiem_cisco_ise_route
+    final: true
+    disabled: false
+    pipeline: cribl_crowdstrike_ngsiem_cisco_ise
+    description: Route Cisco ISE Events
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __packsource=='cribl-crowdstrike-ngsiem-rest.cisco_ise'
+    clones: []
+    output: out_crowdstrike_ngsiem_cisco_ise
+  - id: sSOqkW
+    name: cribl_crowdstrike_ngsiem_citrix_netscaler_route
+    final: true
+    disabled: false
+    pipeline: cribl_crowdstrike_ngsiem_citrix_netscaler
+    description: Route Citrix Netscaler Events
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __packsource=='cribl-crowdstrike-ngsiem-rest.citrix_netscaler'
+    clones: []
+    output: out_crowdstrike_ngsiem_citrix_netscaler
+  - id: oZXX99
+    name: cribl_crowdstrike_ngsiem_windows_events_route
+    final: true
+    disabled: false
+    pipeline: cribl_crowdstrike_ngsiem_windows_events
+    description: Route Windows Security Events
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __packsource == 'cribl-crowdstrike-ngsiem-rest.edge-windows-security'
+    clones: []
+    output: out_crowdstrike_ngsiem_windows_events
+  - id: default
+    name: default
+    final: true
+    disabled: false
+    pipeline: main
+    description: ""
+    enableOutputExpression: false
+    outputExpression: null
+    filter: "true"
+    clones: []
+    output: default

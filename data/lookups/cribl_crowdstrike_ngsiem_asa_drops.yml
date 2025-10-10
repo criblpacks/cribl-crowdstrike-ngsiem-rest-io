@@ -1,0 +1,6 @@
+id: cribl_crowdstrike_ngsiem_asa_drops.csv
+size: 2437
+mode: memory
+rows: 35
+version: lhwXGuZz
+description: List of ASA Codes to drop when seen

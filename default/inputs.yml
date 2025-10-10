@@ -1,0 +1,186 @@
+inputs:
+  in_palo_alto_networks_syslog:
+    disabled: true
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    host: 0.0.0.0
+    maxBufferSize: 1000
+    ipWhitelistRegex: /.*/
+    timestampTimezone: local
+    singleMsgUdpPackets: false
+    enableProxyHeader: false
+    keepFieldsList: []
+    octetCounting: false
+    inferFraming: true
+    strictlyInferOctetCounting: true
+    allowNonStandardAppName: false
+    maxActiveCxn: 1000
+    socketIdleTimeout: 0
+    socketEndingMaxWait: 30
+    socketMaxLifespan: 0
+    tls:
+      disabled: true
+    enableLoadBalancing: false
+    type: syslog
+    description: Syslog input for Palo Alto Networks Firewall
+    udpPort: 20000
+    tcpPort: 20000
+    __template_udpPort: crowdstrike_ngsiem_pan_syslog_udp_port
+    __template_tcpPort: crowdstrike_ngsiem_pan_syslog_tcp_port
+    metadata:
+      - name: __packsource
+        value: "'cribl-crowdstrike-ngsiem-rest.palo_alto_networks'"
+  in_cisco_asa_syslog:
+    disabled: true
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    host: 0.0.0.0
+    maxBufferSize: 1000
+    ipWhitelistRegex: /.*/
+    timestampTimezone: local
+    singleMsgUdpPackets: false
+    enableProxyHeader: false
+    keepFieldsList: []
+    octetCounting: false
+    inferFraming: true
+    strictlyInferOctetCounting: true
+    allowNonStandardAppName: false
+    maxActiveCxn: 1000
+    socketIdleTimeout: 0
+    socketEndingMaxWait: 30
+    socketMaxLifespan: 0
+    tls:
+      disabled: true
+    enableLoadBalancing: false
+    type: syslog
+    description: Syslog input for Cisco ASA Firewall
+    udpPort: 20001
+    __template_udpPort: crowdstrike_ngsiem_cisco_asa_udp_syslog_port
+    tcpPort: 20001
+    __template_tcpPort: crowdstrike_ngsiem_cisco_asa_tcp_syslog_port
+    metadata:
+      - name: __packsource
+        value: "'cribl-crowdstrike-ngsiem-rest.cisco_asa'"
+  in_fortigate_firewall_syslog:
+    disabled: true
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    host: 0.0.0.0
+    maxBufferSize: 1000
+    ipWhitelistRegex: /.*/
+    timestampTimezone: local
+    singleMsgUdpPackets: false
+    enableProxyHeader: false
+    keepFieldsList: []
+    octetCounting: false
+    inferFraming: true
+    strictlyInferOctetCounting: true
+    allowNonStandardAppName: false
+    maxActiveCxn: 1000
+    socketIdleTimeout: 0
+    socketEndingMaxWait: 30
+    socketMaxLifespan: 0
+    tls:
+      disabled: true
+    enableLoadBalancing: false
+    type: syslog
+    description: Syslog input for Fortigate Fortinet Firewall
+    udpPort: 20002
+    tcpPort: 20002
+    __template_udpPort: crowdstrike_ngsiem_fortigate_fortinet_udp_syslog_port
+    __template_tcpPort: crowdstrike_ngsiem_fortigate_fortinet_tcp_syslog_port
+    metadata:
+      - name: __packsource
+        value: "'cribl-crowdstrike-ngsiem-rest.fortigate_firewall'"
+  in_windows_event_log:
+    disabled: true
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    host: 0.0.0.0
+    tls:
+      disabled: true
+    maxActiveReq: 256
+    maxRequestsPerSocket: 0
+    enableProxyHeader: false
+    captureHeaders: false
+    activityLogSampleRate: 100
+    requestTimeout: 0
+    socketTimeout: 0
+    keepAliveTimeout: 5
+    enableHealthCheck: false
+    ipAllowlistRegex: /.*/
+    ipDenylistRegex: /^$/
+    type: cribl_http
+    __template_port: cribl_crowdstrike_windows_events_http_port
+    port: 20003
+    metadata:
+      - name: __packsource
+        value: "'cribl-crowdstrike-ngsiem-rest.edge-windows-security'"
+  in_cisco_ise_syslog:
+    disabled: true
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    host: 0.0.0.0
+    maxBufferSize: 1000
+    ipWhitelistRegex: /.*/
+    timestampTimezone: local
+    singleMsgUdpPackets: false
+    enableProxyHeader: false
+    keepFieldsList: []
+    octetCounting: false
+    inferFraming: true
+    strictlyInferOctetCounting: true
+    allowNonStandardAppName: false
+    maxActiveCxn: 1000
+    socketIdleTimeout: 0
+    socketEndingMaxWait: 30
+    socketMaxLifespan: 0
+    tls:
+      disabled: true
+    enableLoadBalancing: false
+    type: syslog
+    description: Syslog input for Cisco ASA Firewall
+    udpPort: 20005
+    __template_udpPort: crowdstrike_ngsiem_cisco_ise_udp_syslog_port
+    tcpPort: 20005
+    __template_tcpPort: crowdstrike_ngsiem_cisco_ise_tcp_syslog_port
+    metadata:
+      - name: __packsource
+        value: "'cribl-crowdstrike-ngsiem-rest.cisco_ise'"
+  in_citrix_netscaler_syslog:
+    disabled: true
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    host: 0.0.0.0
+    maxBufferSize: 1000
+    ipWhitelistRegex: /.*/
+    timestampTimezone: local
+    singleMsgUdpPackets: false
+    enableProxyHeader: false
+    keepFieldsList: []
+    octetCounting: false
+    inferFraming: true
+    strictlyInferOctetCounting: true
+    allowNonStandardAppName: false
+    maxActiveCxn: 1000
+    socketIdleTimeout: 0
+    socketEndingMaxWait: 30
+    socketMaxLifespan: 0
+    tls:
+      disabled: true
+    enableLoadBalancing: false
+    type: syslog
+    description: Syslog input for Cisco ASA Firewall
+    udpPort: 20004
+    __template_udpPort: crowdstrike_ngsiem_citrix_netscaler_udp_syslog_port
+    tcpPort: 20004
+    __template_tcpPort: crowdstrike_ngsiem_citrix_netscaler_tcp_syslog_port
+    metadata:
+      - name: __packsource
+        value: "'cribl-crowdstrike-ngsiem-rest.citrix_netscaler'"

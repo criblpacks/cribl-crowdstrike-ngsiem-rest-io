@@ -1,0 +1,47 @@
+output: default
+groups:
+  IF9Gmi:
+    name: Drop and/or suppress
+    description: Pick neither, either, or both. Adjust suppression options as required
+    index: 4
+    disabled: false
+asyncFuncTimeout: 1000
+functions:
+  - id: comment
+    filter: "true"
+    disabled: null
+    conf:
+      comment: >-
+        NOTE: This pipeline comes from the Cisco ASA Pack but has been trimmed
+        to only support dropping unneeded ASA codes.
+
+        https://packs.cribl.io/packs/cribl-cisco-asa-cleanup
+  - id: eval
+    filter: "true"
+    disabled: null
+    conf:
+      add:
+        - name: asa_code
+          value: _raw.match(/%ASA-\S*-(\d+):/)[1]
+    description: Extract the ASA code
+  - id: eval
+    filter: "!asa_code"
+    disabled: false
+    conf:
+      add: []
+    final: true
+    description: If we can't match any ASA code stop here
+  - id: comment
+    filter: "true"
+    disabled: null
+    conf:
+      comment: Enable this group to drop events listed in the
+        cribl_crowdstrike_ngsiem_asa_drops.csv lookup
+  - id: drop
+    filter: C.Lookup('cribl_crowdstrike_ngsiem_asa_drops.csv').match(asa_code) &&
+      C.vars.cribl_crowdstrike_ngsiem_asa_drop_events
+    disabled: false
+    conf: {}
+    final: true
+    groupId: IF9Gmi
+    description: If the code is present in the asa_drops lookup, we drop the event

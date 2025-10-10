@@ -1,0 +1,58 @@
+crowdstrike_json_ingest_endpoint:
+  type: string
+  lib: custom
+  value: "'https://ingest.us-1.crowdstrike.com/api/ingest/hec/YOUR_UUID/v1/servic\
+    es/collector'"
+  description: The Crowdstrike JSON Ingest HEC Endpoint - configured in Crowdstrike
+crowdstrike_ngsiem_pan_syslog_udp_port:
+  type: number
+  lib: custom
+  value: "20000"
+crowdstrike_ngsiem_pan_syslog_tcp_port:
+  type: number
+  lib: custom
+  value: "20000"
+crowdstrike_ngsiem_cisco_asa_udp_syslog_port:
+  type: number
+  lib: custom
+  value: "20001"
+crowdstrike_ngsiem_cisco_asa_tcp_syslog_port:
+  type: number
+  lib: custom
+  value: "20001"
+crowdstrike_ngsiem_fortigate_fortinet_udp_syslog_port:
+  type: number
+  lib: custom
+  value: "20002"
+crowdstrike_ngsiem_fortigate_fortinet_tcp_syslog_port:
+  type: number
+  lib: custom
+  value: "20002"
+cribl_crowdstrike_ngsiem_pan_device_name_as_host:
+  type: boolean
+  lib: custom
+  value: "false"
+cribl_crowdstrike_ngsiem_asa_drop_events:
+  type: boolean
+  lib: custom
+  value: "false"
+cribl_crowdstrike_windows_events_http_port:
+  type: number
+  lib: custom
+  value: "20003"
+crowdstrike_ngsiem_citrix_netscaler_udp_syslog_port:
+  type: number
+  lib: custom
+  value: "20004"
+crowdstrike_ngsiem_citrix_netscaler_tcp_syslog_port:
+  type: number
+  lib: custom
+  value: "20004"
+crowdstrike_ngsiem_cisco_ise_udp_syslog_port:
+  type: number
+  lib: custom
+  value: "20005"
+crowdstrike_ngsiem_cisco_ise_tcp_syslog_port:
+  type: number
+  lib: custom
+  value: "20005"

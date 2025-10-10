@@ -1,0 +1,8 @@
+mode: memory
+id: cribl_crowdstrike_ngsiem_pan_device_info.csv
+description: Provides time zone information based on host configuration. Time
+  zones should be specified in Olson format. E.g. America/Chicago, Etc/GMT-5,
+  US/Central, etc.
+version: 7D5ZCRdP
+rows: 0
+size: 7

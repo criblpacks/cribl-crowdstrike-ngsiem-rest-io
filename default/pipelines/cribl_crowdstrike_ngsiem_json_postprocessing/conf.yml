@@ -1,0 +1,25 @@
+output: default
+streamtags: []
+groups: {}
+asyncFuncTimeout: 1000
+functions:
+  - id: comment
+    filter: "true"
+    disabled: null
+    conf:
+      comment: Remove all fields except _raw and cribl_pipe before sending to NGSIEM
+  - id: comment
+    filter: "true"
+    disabled: null
+    conf:
+      comment: "Author: Cribl Packs Team"
+  - id: eval
+    filter: "true"
+    disabled: null
+    conf:
+      keep:
+        - _raw
+        - cribl_pipe
+      remove:
+        - "*"
+description: Ensure only the required fields are sent to NGSIEM

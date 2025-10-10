@@ -1,0 +1,30 @@
+4mocdw:
+  sampleName: cribl_crowdstrike_ngsiem_palo_alto
+  created: 1759171068558
+  size: 245397
+  numEvents: 500
+1kNFto:
+  sampleName: cribl_crowdstrike_ngsiem_fortigate-firewall
+  created: 1759171119667
+  size: 957191
+  numEvents: 500
+nyc8ez:
+  sampleName: cribl_crowdstrike_ngsiem_cisco_asa
+  created: 1759774034267
+  size: 4810
+  numEvents: 10
+FJdbfK:
+  sampleName: cribl_crowdstrike_ngsiem_cisco_ise
+  created: 1759774261879
+  size: 6565
+  numEvents: 1
+UJh4ip:
+  sampleName: cribl_crowdstrike_ngsiem_citrix_netscaler
+  created: 1759774516115
+  size: 3822
+  numEvents: 5
+6rZZAm:
+  sampleName: cribl_crowdstrike_ngsiem_windows_security_xml
+  created: 1759774658370
+  size: 13195
+  numEvents: 10

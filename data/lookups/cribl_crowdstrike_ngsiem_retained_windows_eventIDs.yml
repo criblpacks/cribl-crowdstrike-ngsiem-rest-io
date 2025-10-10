@@ -1,0 +1,6 @@
+id: cribl_crowdstrike_ngsiem_retained_windows_eventIDs.csv
+size: 1655
+mode: memory
+description: Only Windows Security Event ID's that match this lookup will be retained
+rows: 205
+version: Pm4Zphx6
